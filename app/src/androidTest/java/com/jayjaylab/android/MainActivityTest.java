@@ -9,6 +9,8 @@ import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.doesNotExist;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 /**
@@ -24,6 +26,6 @@ public class MainActivityTest {
     @Test
     public void testHelloWorldTextViewExistence() {
         // is there hellow world textview in MainActivity
-        onView(withText("Hello World!")).check(doesNotExist());
+        onView(withText("Hello world!")).check(matches(isDisplayed()));
     }
 }
